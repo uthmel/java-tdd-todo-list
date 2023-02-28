@@ -1,15 +1,45 @@
-# Java Template
+# Todo List
 
 ## Learning Objectives
-- Example learning objective
+- Use user stories to create a domain model
+- Use the Red Green Refactor approach to create source code from tests
 
 ## Set up instructions
 - Fork this repository and clone the forked version to your machine
 - Open the root directory of the project in IntelliJ
-- Implement the requirements listed in comments in the `./src/main/java/com.booleanuk/core/Exercise.java` file
-- When ready to test your solution, open the `./src/test/java/com.booleanuk/core/ExerciseTest.java` file and click a "Run Test" button. You can either run the entire test suite via figure 1 in the screenshot below, or run a specific test via figure 2.
 
-![](./assets/run-a-test.PNG)
+## Exercise Instructions
+
+It may be beneficial to work in groups during the design phase of this exercise.
+
+1. Create domain models based on the requirements outlined below. It's recommended that you put a good effort into this step, it'll make the next steps much easier.
+2. Add your domain model to either a file named `domain-model.md` or as a screenshot.
+3. There is an empty class named `TodoList` in `./src/main/java/com.booleanuk/core/`, you should write your source code in here
+4. There is an almost empty test class for the `TodoList` class in `./src/test/java/com.booleanuk/core`, you should write your tests in here. There is an example test to help you with the format, use the tests in previous exercises to help guide you in using the `Assertions` class
+5. For each requirement below, use the Red Green Refactor approach to create a single test and then make it pass by writing source code. It's important to practice writing the test first, don't rob yourself of learning this vital skill.
+
+## Core Requirements
+
+- I want to add tasks to my todo list.
+- I want to see all the tasks in my todo list.
+- I want to change the status of a task between incomplete and complete.
+- I want to be able to get only the complete tasks.
+- I want to be able to get only the incomplete tasks.
+- I want to search for a task and receive a message that says it wasn't found if it doesn't exist.
+- I want to remove tasks from my list.
+- I want to see all the tasks in my list ordered alphabetically in ascending order.
+- I want to see all the tasks in my list ordered alphabetically in descending order.
+
+## Extension Requirements
+
+Work on these only after you have complete the core requirements. You may need to make changes to your domain model to complete these.
+
+Create new classes and tests for these requirements in the `./src/main/java/com.booleanuk/extension/` and `.src/test/java/com.booleanuk/extension/` directories respectively. **Do not continue working in the same classes you used during the core requirements above.**
+
+- I want to be able to get a task by a unique ID.
+- I want to update the name of a task by providing its ID and a new name.
+- I want to be able to change the status of a task by providing its ID.
+- I want to be able to see the date and time that I created each task.
 
 ## Test Output
 
@@ -21,6 +51,6 @@ In the sample screenshot below, we've tried to complete the first step of the ex
 
 At the top, we see `expected: <32> but was: <33>`. This means the test expected the value to be 32, but the value the student provided was 33. We can see this in the code snippets at the top of the screenshot.
 
-In the stack trace itself, we see this line: `at app//com.booleanuk.core.ExerciseTest.shouldBeAged32(ExerciseTest.java:20)`. This is helpful! This tells us the exact line in the ExerciseTest.java file (line 20) where the failure happened, as well as the method name (shouldBeAged32), helping us to identify where the issue began. This is the kind of thing you need to look for; a relevant file name, method name, class name and line number to give you a good starting point for debugging.
+In the stack trace itself, we see this line: `at app//com.booleanuk.core.TodoListTest.shouldBeAged32(ExerciseTest.java:20)`. This is helpful! This tells us the exact line in the ExerciseTest.java file (line 20) where the failure happened, as well as the method name (shouldBeAged32), helping us to identify where the issue began. This is the kind of thing you need to look for; a relevant file name, method name, class name and line number to give you a good starting point for debugging.
 
 ![](./assets/test-failure.PNG)
