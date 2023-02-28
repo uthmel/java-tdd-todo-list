@@ -36,6 +36,8 @@ Work on these only after you have completed the core requirements. You may need 
 
 Create new classes and tests for these requirements in the `./src/main/java/com.booleanuk/extension/` and `.src/test/java/com.booleanuk/extension/` directories respectively. **Do not continue working in the same classes you used during the core requirements above.**
 
+You will see a `.gitkeep` file in each of those directories, you can safely ignore them. They're just there to make sure the directories are pushed to the repository when they're empty.
+
 - I want to be able to get a task by a unique ID.
 - I want to update the name of a task by providing its ID and a new name.
 - I want to be able to change the status of a task by providing its ID.
