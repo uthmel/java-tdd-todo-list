@@ -114,4 +114,19 @@ class TodoListTest {
     }
 
 
+    @Test
+    public void testAscendingOrder() {
+        TodoList todoList = new TodoList();
+        todoList.addTask("Walk with Dog");
+        todoList.addTask("Buy groceries");
+
+        boolean result1 = todoList.AscendingOrder("Buy groceries");
+
+        Assertions.assertTrue(result1, "The task has been removed");
+
+
+
+    }
+
+
 }
