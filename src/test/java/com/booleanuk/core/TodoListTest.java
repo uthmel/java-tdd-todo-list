@@ -82,27 +82,23 @@ class TodoListTest {
 
 
     @Test
-    public void testSearchTask() {
+    public void testSearchTaskFound() {
         TodoList todoList = new TodoList();
         todoList.addTask("Buy Groceries");
-        todoList.addTask("Buy Clothes");
-        todoList.addTask("Walk with Dog");
-        List<Task> tasks = todoList.getAllTasks();
-
-        for(Task task : tasks){
-            if (task.!equals())
-
-            }
-
-
-
-
-
-
-
+        String result = todoList.searchTask("Buy Groceries");
+        Assertions.assertEquals("The task was found", result, "The task should be found");
     }
 
 
+    @Test
+    public void testSearchTaskNotFound() {
+        TodoList todoList = new TodoList();
+        todoList.addTask("Walk with Dog");
+        String result = todoList.searchTask("Buy Groceries");
+        List<Task> tasks = todoList.getAllTasks();
+
+        Assertions.assertEquals("The task was not found", result, "The task does not exist");
+    }
 
 
 }
