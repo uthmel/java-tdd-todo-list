@@ -56,6 +56,19 @@ class TodoListTest {
     }
 
     @Test
+    public void testChangeTaskToComplete() {
+
+        TodoList todoList = new TodoList();
+        todoList.addTask("Buy Groceries");
+
+        List<Task> tasks = todoList.getAllTasks();
+        Task task = tasks.getFirst();
+        task.setComplete(true);
+
+        Assertions.assertEquals(task.isComplete(), true);
+
+
+    }
 
 
 
