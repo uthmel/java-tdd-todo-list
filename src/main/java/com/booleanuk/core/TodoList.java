@@ -10,7 +10,6 @@ public class TodoList {
     public TodoList(){
         this.tasks = new ArrayList<>();
     }
-
     public boolean addTask(String taskDescription){
         for(Task task : tasks){
             if (task.getDescription().equalsIgnoreCase(taskDescription)){
