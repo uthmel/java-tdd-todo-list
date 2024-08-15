@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodoList {
-    public List<Task> tasks;
+    public final List<Task> tasks;
 
     public TodoList(){
         this.tasks = new ArrayList<>();
@@ -24,7 +24,17 @@ public class TodoList {
     }
 
     public List<Task> getAllTasks() {
-        return tasks;
+        return new ArrayList<>(tasks);
+
+    }
+
+    public String searchTask(String taskName) {
+        for(Task task : tasks){
+            if (task.getDescription().equalsIgnoreCase(taskName)) {
+                return "The task was found";
+            }
+        }
+        return "The task was not found";
 
     }
 
@@ -51,5 +61,7 @@ class Task {
     public void setComplete(boolean complete) {
         isComplete = complete;
     }
+
+
 }
 
