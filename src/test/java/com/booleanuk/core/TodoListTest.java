@@ -6,9 +6,18 @@ import org.junit.jupiter.api.Test;
 class TodoListTest {
 
     @Test
-    public void testAddTask(){
+    public void testAddTaskIfNotExist(){
         TodoList todolist = new TodoList();
         boolean result1 = todolist.addTask("Buy groceries");
-        Assertions.assertTrue(result1, "The task should be added sucessfully");
+        Assertions.assertTrue(result1, "The task should be added successfully");
+
+    }
+
+    @Test
+    public void testAddTaskIfExists() {
+        TodoList todolist = new TodoList();
+        boolean result2 = todolist.addTask("Buy groceries");
+        Assertions.assertFalse(result2, "The task should not be added successfully, since it already exists");
+
     }
 }
