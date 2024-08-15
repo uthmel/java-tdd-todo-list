@@ -23,14 +23,21 @@ public class TodoList {
         return true;
     }
 
+    public List<Task> getAllTasks() {
+        return tasks;
+
+    }
+
 }
 
 
 class Task {
     private final String description;
+    private boolean isComplete;
 
     public Task(String description) {
         this.description = description;
+        this.isComplete = false;
     }
 
     public String getDescription() {
@@ -39,3 +46,4 @@ class Task {
 
 
 }
+
