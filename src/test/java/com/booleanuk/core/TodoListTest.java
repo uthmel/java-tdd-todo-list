@@ -95,9 +95,23 @@ class TodoListTest {
         TodoList todoList = new TodoList();
         todoList.addTask("Walk with Dog");
         String result = todoList.searchTask("Buy Groceries");
+        Assertions.assertEquals("The task was not found", result, "The task does not exist");
+    }
+
+
+    @Test
+    public void testRemoveTaskFromList() {
+        TodoList todoList = new TodoList();
+        todoList.addTask("Walk with Dog");
+        todoList.addTask("Buy groceries");
+
         List<Task> tasks = todoList.getAllTasks();
 
-        Assertions.assertEquals("The task was not found", result, "The task does not exist");
+        todoList.removeTask("Walk with Dog");
+
+        tasks.getFirst().equals("Buy groceries");
+
+
     }
 
 
