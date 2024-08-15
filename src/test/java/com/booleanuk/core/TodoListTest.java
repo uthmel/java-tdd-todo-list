@@ -31,13 +31,26 @@ class TodoListTest {
     }
 
     @Test
-    public void testGetAllTasks() {
+    public void testGetAllTasksNumber() {
         TodoList todoList = new TodoList();
         todoList.addTask("Buy Groceries");
         todoList.addTask("Buy Clothes");
 
         List<Task> tasks = todoList.getAllTasks();
         Assertions.assertEquals(2,tasks.size());
+
+
+    }
+
+
+    @Test
+    public void testGetAllTasksStringEqual() {
+        TodoList todoList = new TodoList();
+        todoList.addTask("Buy Groceries");
+
+        List<Task> tasks = todoList.getAllTasks();
+        Assertions.assertEquals(tasks, "Buy Groceries");
+
 
     }
 
