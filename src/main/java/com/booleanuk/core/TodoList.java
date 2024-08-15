@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodoList {
-    private final List<Task> tasks;
+    public List<Task> tasks;
 
     public TodoList(){
         this.tasks = new ArrayList<>();
@@ -44,6 +44,12 @@ class Task {
         return description;
     }
 
+    public boolean isComplete() {
+        return isComplete;
+    }
 
+    public void setComplete(boolean complete) {
+        isComplete = complete;
+    }
 }
 
