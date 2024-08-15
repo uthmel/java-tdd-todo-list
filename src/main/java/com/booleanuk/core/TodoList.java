@@ -38,6 +38,17 @@ public class TodoList {
 
     }
 
+    public boolean removeTask(String taskName) {
+        for(Task task : tasks){
+            if (task.getDescription().equalsIgnoreCase(taskName)) {
+                tasks.remove(taskName);
+                return true;
+            }
+        }
+        return false;
+
+    }
+
 }
 
 

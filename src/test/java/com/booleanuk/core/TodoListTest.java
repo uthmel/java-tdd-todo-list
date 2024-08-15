@@ -105,11 +105,10 @@ class TodoListTest {
         todoList.addTask("Walk with Dog");
         todoList.addTask("Buy groceries");
 
-        List<Task> tasks = todoList.getAllTasks();
+        boolean result1 = todoList.removeTask("Buy groceries");
 
-        todoList.removeTask("Walk with Dog");
+        Assertions.assertTrue(result1, "The task has been removed");
 
-        tasks.getFirst().equals("Buy groceries");
 
 
     }
