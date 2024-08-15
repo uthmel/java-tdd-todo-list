@@ -69,7 +69,7 @@ class TodoListTest {
     }
 
     @Test
-    public void testChangeTaskToCompleteFalse(){
+    public void testChangeTaskToInComplete(){
         TodoList todoList = new TodoList();
         todoList.addTask("Buy Groceries");
         List<Task> tasks = todoList.getAllTasks();
@@ -80,6 +80,27 @@ class TodoListTest {
 
     }
 
+
+    @Test
+    public void testSearchTask() {
+        TodoList todoList = new TodoList();
+        todoList.addTask("Buy Groceries");
+        todoList.addTask("Buy Clothes");
+        todoList.addTask("Walk with Dog");
+        List<Task> tasks = todoList.getAllTasks();
+
+        for(Task task : tasks){
+            if (task.!equals())
+
+            }
+
+
+
+
+
+
+
+    }
 
 
 
