@@ -49,10 +49,14 @@ class TodoListTest {
         todoList.addTask("Buy Groceries");
 
         List<Task> tasks = todoList.getAllTasks();
-        Assertions.assertEquals(tasks, "Buy Groceries");
+        Assertions.assertEquals("Buy Groceries", tasks.get(0).getDescription(), "The tasks matches'");
+        Assertions.assertNotEquals("Buy Clothes", tasks.get(0).getDescription(), "The task description should be 'Buy Groceries'");
 
 
     }
+
+    @Test
+
 
 
 }
