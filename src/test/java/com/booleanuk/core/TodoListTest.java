@@ -115,14 +115,30 @@ class TodoListTest {
 
 
     @Test
-    public void testAscendingOrder() {
+    public void testSortListAscending() {
         TodoList todoList = new TodoList();
         todoList.addTask("Walk with Dog");
         todoList.addTask("Buy groceries");
 
-        boolean result1 = todoList.AscendingOrder("Buy groceries");
+        List<Task> sortedTasks = todoList.sortListAscending();
 
-        Assertions.assertTrue(result1, "The task has been removed");
+        Assertions.assertEquals("Buy groceries", sortedTasks.get(0).getDescription(), "The first task should be 'Buy groceries'");
+        Assertions.assertEquals("Walk with Dog", sortedTasks.get(1).getDescription(), "The second task should be 'Walk with Dog'");
+
+
+
+    }
+
+    @Test
+    public void testSortListDecending() {
+        TodoList todoList = new TodoList();
+        todoList.addTask("Buy groceries");
+        todoList.addTask("Walk with Dog");
+
+        List<Task> sortedTasks = todoList.sortListAscending();
+
+        Assertions.assertEquals("Walk with Dog", sortedTasks.get(1).getDescription(), "The first task should be 'Walk with dog'");
+        Assertions.assertEquals("Buy groceries", sortedTasks.get(0).getDescription(), "The second task should be 'Buy groceries'");
 
 
 
